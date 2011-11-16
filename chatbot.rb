@@ -11,13 +11,9 @@ require 'linkbot/base_plugins'
 Linkbot::Plugin.collect
 
 # change this if you need to connect to another server
-PTN_SERVER = "http://10.42.0.1"
-PTN_USER   = "thebot"
-PTN_PASS   = "lerdynda89"
-
-# PTN_SERVER = "http://localhost:3000"
-# PTN_USER   = "admin"
-# PTN_PASS   = "admin"
+PTN_SERVER = "http://localhost:3000"
+PTN_USER   = "admin"
+PTN_PASS   = "admin"
 
 protonet = Protolink::Protonet.open(PTN_SERVER, PTN_USER, PTN_PASS)
 protonet.socket do |json|
