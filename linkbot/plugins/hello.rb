@@ -12,7 +12,7 @@ class Hello < Linkbot::Plugin
 
     Linkbot::Plugin.register('hello', self,
       {
-        :message => {:regex => /h(e|a)llo @thebot/, :handler => :on_message}
+        :message => {:regex => /h(e|a)llo @#{::BOT_USER}/, :handler => :on_message}
       }
     )
 end
