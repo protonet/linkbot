@@ -29,7 +29,7 @@ protonet.socket do |json|
     if response.is_a?(Hash)
       image_url = (response[:image] || response[:images].first)
       text_extension = {
-        "title"         => "bot",
+        "title"         =>  response[:title] || "bot",
         "titleAppendix" => "image",
         "url"           => image_url,
         "type"          => "Image",

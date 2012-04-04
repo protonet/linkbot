@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/protonet/protolink
-  revision: 1de3f1cee440039608daf97672566797429ad7f4
+  revision: f421df6574f4523ee1baf5b40084190dda6d421d
   specs:
-    protolink (0.2.8)
-      crack
+    protolink (0.2.10)
+      eventmachine
       httparty (~> 0.7.4)
 
 GEM
@@ -22,7 +22,7 @@ GEM
     json (1.5.3)
     nokogiri (1.5.0)
     sanitize (2.0.3)
-      nokogiri (< 1.6, >= 1.4.4)
+      nokogiri (>= 1.4.4, < 1.6)
     stemmer (1.0.1)
     twss (0.0.5)
       classifier (= 1.3.1)
@@ -35,6 +35,6 @@ DEPENDENCIES
   eventmachine
   hpricot
   json
-  protolink!
+  protolink (~> 0.2.10)!
   sanitize
   twss
