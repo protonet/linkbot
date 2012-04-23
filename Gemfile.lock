@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/protonet/protolink
-  revision: f421df6574f4523ee1baf5b40084190dda6d421d
+  revision: c621556b3e668080a8fc2fef2f10c651df215364
   specs:
-    protolink (0.2.10)
+    protolink (0.2.11)
       eventmachine
       httparty (~> 0.7.4)
 
