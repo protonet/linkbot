@@ -1,0 +1,29 @@
+#! /bin/bash
+
+DESC="Protobot"
+NAME=protobot
+BOT_DIR=/home/protonet/linkbot
+PIDFILE=$BOT_DIR/protobot.pid
+START="/usr/local/bin/bundle exec /usr/local/bin/ruby $BOT_DIR/chatbot.rb"
+
+case "$1" in
+  start)
+        
+        echo -n "Starting $DESC: "
+        cd $BOT_DIR
+        start-stop-daemon --stop --pidfile $PIDFILE
+        start-stop-daemon --start --make-pidfile --chdir $BOT_DIR --pidfile $PIDFILE --background --exec $START
+        echo "$NAME."
+        ;;
+  stop)
+        echo -n "Stopping $DESC: "
+        start-stop-daemon --stop --pidfile $PIDFILE
+        echo "$NAME."
+        ;;
+  *)
+        echo "Usage: $NAME {start|stop}" >&2
+        exit 1
+        ;;
+esac
+
+exit 0
