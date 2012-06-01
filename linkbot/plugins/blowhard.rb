@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class Blowhard < Linkbot::Plugin
     def self.on_message(message, matches)
       quotes = ['I just blue myself.',

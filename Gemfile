@@ -1,6 +1,6 @@
 source :gemcutter
 
-gem "protolink", "~> 0.2.10",  :git => "https://github.com/protonet/protolink"
+gem "protolink", :git => "https://github.com/protonet/protolink"
 gem "hpricot"
 gem "json"
 gem "sanitize"

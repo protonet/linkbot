@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class Mittag < Linkbot::Plugin
     def self.on_message(message, matches)
       case matches[0]
