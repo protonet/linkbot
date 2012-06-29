@@ -4,7 +4,9 @@ DESC="Protobot"
 NAME=protobot
 BOT_DIR=/home/protonet/linkbot
 PIDFILE=$BOT_DIR/protobot.pid
-START="/usr/local/bin/bundle exec /usr/local/bin/ruby $BOT_DIR/chatbot.rb"
+bundle=`which bundle`
+ruby=`which ruby`
+START="$bundle exec $ruby $BOT_DIR/chatbot.rb"
 
 case "$1" in
   start)
